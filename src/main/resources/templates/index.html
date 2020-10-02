@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <h1>Mi lista de tareas</h1>
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>Fecha Creación</th>
+        <th>Fecha Caducidad</th>
+    </tr>
+    <tr th:each="tareas : ${lista}">
+        <td th:text="${tareas.nombre}">Onions</td>
+        <td th:text="${tareas.fechaCreacion}">2.41</td>
+        <td th:text="${tareas.fechaCaducidad}">yes</td>
+    </tr>
+</table>
+
+</body>
+</html>
